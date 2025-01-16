@@ -9,13 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @StateObject private var viewModel = CoinsViewModel()
     
     var body: some View {
         VStack  {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, World!")
+           
+            Text("\(viewModel.coin): \(viewModel.price)")
             
         }	
         .padding()
